@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_media_featured_projects",
+  "info": {
+    "displayName": "Featured Project",
+    "icon": "archive"
+  },
+  "options": {},
+  "attributes": {
+    "Project_Title": {
+      "type": "string",
+      "required": true
+    },
+    "Project_Description": {
+      "type": "blocks",
+      "required": true
+    }
+  }
+}

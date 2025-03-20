@@ -25,6 +25,11 @@ h1 {
   font-weight: 800;
 }
 
+h2 {
+  font-family: "degular-variable",sans-serif;
+  font-variation-settings: "ital" 0, "opsz" 6, "wght" 600;
+}
+
 h3 {
   font-family: "degular-variable",sans-serif;
 }
@@ -84,6 +89,22 @@ li {
   display: flex;
 }
 
+.jc-flex-end {
+  justify-content: flex-end;
+}
+
+.jc-center {
+  justify-content: center;
+}
+
+.ai-flex-end {
+  align-items: flex-end;
+}
+
+.ac-flex-end {
+  align-content: flex-end;
+}
+
 .column {
   flex-direction: column;
 }
@@ -94,6 +115,22 @@ li {
 
 .row-gap-50 {
   row-gap: 50px;
+}
+
+.width-50 {
+  width: 50%;
+}
+
+.width-50 > h2 {
+  margin-bottom: 0;
+}
+
+.no-margin-bttm {
+  margin-bottom: 0px;
+}
+
+.no-margin-top {
+  margin-top: 0px;
 }
 
 /* === NAVIGATION === */
@@ -132,6 +169,20 @@ li {
 .nav-wrapper a:hover {
   color: var(--highlight);
   transition-duration: 300ms;
+}
+
+.section-wrapper {
+  box-sizing: border-box;
+  height: var(--app-height);
+  margin-left: 20px;
+  padding: 10px 10px 10px 30px;
+  width: calc(100vW * 6 / 7 );
+}
+
+.section-image {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
 }
 
 .footer-wrapper p {
