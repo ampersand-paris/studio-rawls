@@ -3,9 +3,10 @@ import { BrowserRouter as Router,
     Routes,
     Route,
     Link } from "react-router-dom";
-import Landing from '../pages/Landing';
 
 /* === COMPONENTS === */
+import Landing from '../pages/Landing';
+import CollaboratorView from '../pages/CollaboratorView';
 // import useFetch from "../useFetch"
 
     function Nav() {
@@ -93,6 +94,8 @@ import Landing from '../pages/Landing';
                         </div>
                     <Routes>
                         <Route path="/" element={<Landing />} />
+                        <Route path="/collaborators/:id" element={<CollaboratorView />} />
+
                     </Routes>
                 </Router>
             );

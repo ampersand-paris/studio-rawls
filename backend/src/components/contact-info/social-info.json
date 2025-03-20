@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_contact_info_social_infos",
+  "info": {
+    "displayName": "Social_Info"
+  },
+  "options": {},
+  "attributes": {
+    "Link": {
+      "type": "string"
+    },
+    "Icon": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

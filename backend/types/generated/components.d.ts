@@ -1,5 +1,19 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface ContactInfoSocialInfo extends Struct.ComponentSchema {
+  collectionName: 'components_contact_info_social_infos';
+  info: {
+    displayName: 'Social_Info';
+  };
+  attributes: {
+    Icon: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    Link: Schema.Attribute.String;
+  };
+}
+
 export interface MediaEntry extends Struct.ComponentSchema {
   collectionName: 'components_media_entries';
   info: {
@@ -51,6 +65,7 @@ export interface MediaValues extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'contact-info.social-info': ContactInfoSocialInfo;
       'media.entry': MediaEntry;
       'media.featured-project': MediaFeaturedProject;
       'media.image': MediaImage;
