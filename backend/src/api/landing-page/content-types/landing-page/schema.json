@@ -1,0 +1,26 @@
+{
+  "kind": "singleType",
+  "collectionName": "landing_pages",
+  "info": {
+    "singularName": "landing-page",
+    "pluralName": "landing-pages",
+    "displayName": "Landing Page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Sections": {
+      "type": "dynamiczone",
+      "components": [
+        "media.image",
+        "media.values",
+        "media.featured-project"
+      ]
+    },
+    "Mission": {
+      "type": "blocks"
+    }
+  }
+}

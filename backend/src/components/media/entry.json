@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_media_entries",
+  "info": {
+    "displayName": "Entry",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "Value": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "blocks"
+    }
+  }
+}

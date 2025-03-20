@@ -3,6 +3,7 @@ import { BrowserRouter as Router,
     Routes,
     Route,
     Link } from "react-router-dom";
+import Landing from '../pages/Landing';
 
 /* === COMPONENTS === */
 // import useFetch from "../useFetch"
@@ -91,7 +92,7 @@ import { BrowserRouter as Router,
                             </div>
                         </div>
                     <Routes>
-                        <Route path="/" />
+                        <Route path="/" element={<Landing />} />
                     </Routes>
                 </Router>
             );
