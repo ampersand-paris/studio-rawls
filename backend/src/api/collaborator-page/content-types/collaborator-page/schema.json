@@ -1,0 +1,27 @@
+{
+  "kind": "singleType",
+  "collectionName": "collaborator_pages",
+  "info": {
+    "singularName": "collaborator-page",
+    "pluralName": "collaborator-pages",
+    "displayName": "Collaborator Page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Page_Copy": {
+      "type": "blocks"
+    },
+    "collaborators": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::collaborator.collaborator"
+    },
+    "tags": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tag.tag"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tags",
+  "info": {
+    "singularName": "tag",
+    "pluralName": "tags",
+    "displayName": "Tag"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Tag": {
+      "type": "string"
+    },
+    "collaborator": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::collaborator.collaborator",
+      "inversedBy": "tags"
+    }
+  }
+}
