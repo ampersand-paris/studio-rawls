@@ -7,6 +7,8 @@ import { BrowserRouter as Router,
 /* === COMPONENTS === */
 import Landing from '../pages/Landing';
 import CollaboratorView from '../pages/CollaboratorView';
+import CollaboratorList from '../pages/CollaboratorList';
+
 // import useFetch from "../useFetch"
 
     function Nav() {
@@ -95,7 +97,7 @@ import CollaboratorView from '../pages/CollaboratorView';
                     <Routes>
                         <Route path="/" element={<Landing />} />
                         <Route path="/collaborators/:id" element={<CollaboratorView />} />
-
+                        <Route path="/collaborators" element={<CollaboratorList />} />
                     </Routes>
                 </Router>
             );

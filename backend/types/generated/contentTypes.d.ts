@@ -369,6 +369,40 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiCollaboratorPageCollaboratorPage
+  extends Struct.SingleTypeSchema {
+  collectionName: 'collaborator_pages';
+  info: {
+    displayName: 'Collaborator Page';
+    pluralName: 'collaborator-pages';
+    singularName: 'collaborator-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    collaborators: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::collaborator.collaborator'
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::collaborator-page.collaborator-page'
+    > &
+      Schema.Attribute.Private;
+    Page_Copy: Schema.Attribute.Blocks;
+    publishedAt: Schema.Attribute.DateTime;
+    tags: Schema.Attribute.Relation<'oneToMany', 'api::tag.tag'>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiCollaboratorCollaborator
   extends Struct.CollectionTypeSchema {
   collectionName: 'collaborators';
@@ -1014,6 +1048,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::collaborator-page.collaborator-page': ApiCollaboratorPageCollaboratorPage;
       'api::collaborator.collaborator': ApiCollaboratorCollaborator;
       'api::landing-page.landing-page': ApiLandingPageLandingPage;
       'api::project.project': ApiProjectProject;

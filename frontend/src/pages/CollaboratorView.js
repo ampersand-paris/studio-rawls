@@ -34,13 +34,15 @@ import { BlocksRenderer } from '@strapi/blocks-react-renderer';
                             <h3>{ collaborator.Title }</h3>
                             {tags.map((tag, index) => 
                                 <div key={ index }>
-                                    <p>{ tag.Tag }</p>
+                                    <div className="tag">
+                                        <p>{ tag.Tag }</p>
+                                    </div>
                                 </div>
                             )}
                             <BlocksRenderer content={ collaborator.Bio } />
                             <h2>Current Projects</h2>
                             {projects.map((project, index) => 
-                                <div key={ index }>
+                                <div lassName="tag" key={ index }>
                                     <p>{ project.Project_Title }</p>
                                 </div>
                             )}
