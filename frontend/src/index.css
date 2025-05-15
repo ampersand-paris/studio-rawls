@@ -152,6 +152,10 @@ li {
   display: grid;
 }
 
+.rows-three {
+  grid-template-rows: 1fr, 3fr, 1fr;
+}
+
 .columns-three {
   grid-template-columns: repeat(3, 1fr);
   column-gap: 20px;
@@ -306,6 +310,7 @@ li {
 .collaborator-column {
   border-left: 1px solid var(--seafoam);
   border-right: 1px solid var(--seafoam);
+  padding-top: 30px;
 }
 
 .profile-picture-small {
@@ -317,4 +322,52 @@ li {
 
 .padding-sm {
   padding: 10px;
+}
+
+/* === EVENTS === */
+.events-wrapper {
+  box-sizing: border-box;
+  border-bottom: 1px solid var(--seafoam);
+  height: calc(var(--app-height) / 2);
+  margin-left: 20px;
+  padding: 0px 10px 0px 30px;
+  width: calc(100vW * 6 / 7 );
+}
+
+.event-info-wrapper {
+  box-sizing: border-box;
+  padding: 0px 10px 0px 20px;
+  min-height: 50vH;
+  width: calc(100vW * 6 / 7 );
+}
+
+.event-description {
+  background-color: var(--seafoam);
+  color: var(--primary-util);
+  padding: 10px 10px 10px 20px;
+}
+
+.event-details {
+  padding: 10px;
+  color: var(--seafoam);
+}
+
+
+.event-details > a {
+  color: var(--seafoam);
+}
+
+.event-border {
+  border: 1px solid var(--seafoam);
+  height: 224px;
+  position: absolute;
+  top: 29px;
+  left: 0px;
+  width: 100vW;
+  z-index: -1;
+}
+
+.selected-event {
+  background: #ffffff;
+background: linear-gradient(45deg,rgba(255, 255, 255, 0) 70%, rgba(146, 162, 120, 1) 78%, rgba(146, 162, 120, 1) 100%);
 }

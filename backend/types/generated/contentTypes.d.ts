@@ -442,6 +442,39 @@ export interface ApiCollaboratorCollaborator
   };
 }
 
+export interface ApiEventEvent extends Struct.CollectionTypeSchema {
+  collectionName: 'events';
+  info: {
+    displayName: 'Event';
+    pluralName: 'events';
+    singularName: 'event';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    Date_Written: Schema.Attribute.String;
+    Event_Description: Schema.Attribute.Blocks;
+    Event_Details: Schema.Attribute.Blocks;
+    Event_Thumbnail: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    Event_Title: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::event.event'> &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    Start_Date: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiLandingPageLandingPage extends Struct.SingleTypeSchema {
   collectionName: 'landing_pages';
   info: {
@@ -1050,6 +1083,7 @@ declare module '@strapi/strapi' {
       'admin::user': AdminUser;
       'api::collaborator-page.collaborator-page': ApiCollaboratorPageCollaboratorPage;
       'api::collaborator.collaborator': ApiCollaboratorCollaborator;
+      'api::event.event': ApiEventEvent;
       'api::landing-page.landing-page': ApiLandingPageLandingPage;
       'api::project.project': ApiProjectProject;
       'api::tag.tag': ApiTagTag;
