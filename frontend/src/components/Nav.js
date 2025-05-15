@@ -8,6 +8,7 @@ import { BrowserRouter as Router,
 import Landing from '../pages/Landing';
 import CollaboratorView from '../pages/CollaboratorView';
 import CollaboratorList from '../pages/CollaboratorList';
+import EventList from '../pages/EventList';
 
 // import useFetch from "../useFetch"
 
@@ -46,7 +47,7 @@ import CollaboratorList from '../pages/CollaboratorList';
                                     </defs>
                                 </svg>
                                 <div className="flex column row-gap-10">
-                                    <Link to={ "/" }>
+                                    <Link to={ "/events" }>
                                         <h6>Events</h6>
                                     </Link>
                                     <Link to={ "/" }>
@@ -98,6 +99,7 @@ import CollaboratorList from '../pages/CollaboratorList';
                         <Route path="/" element={<Landing />} />
                         <Route path="/collaborators/:id" element={<CollaboratorView />} />
                         <Route path="/collaborators" element={<CollaboratorList />} />
+                        <Route path="/events" element={<EventList />} />
                     </Routes>
                 </Router>
             );
